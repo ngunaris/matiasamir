@@ -1,0 +1,56 @@
+<div class="showcase">
+    <div class="contenedor">
+        <div class="btns">
+            <a routerLink="/en-casa" class="btn btn-primary" >En Sala</a>
+            <a routerLink="/alto-rendimiento" class="btn btn-primary">Alto Rendimiento</a>
+        </div>
+        <div class="bio-container">
+            <div class="bio">
+                <h3 id="titulo">Entrenamiento grupal al aire libre</h3>
+                <br><br>
+                <p>Por lo general nuestra rutina diaria está cargada de preocupaciones y situaciones
+                    a resolver, las cuales nos van cargando de estrés.
+                    Nuestros grupos de entrenamiento cuentan con un objetivo claro y definido;
+                    buscamos mejorar tu condición física y anímica basados en actividades
+                    recreativas y deportivas.
+                    Tenemos un solo requisito...ser constantes. El resto caen en manos del
+                    profesional, que en conjunto con el grupo harán que pases un rato diferente
+                    potenciando tus habilidades.
+                </p>
+            </div>
+            <div class="bio-img" id="pic-bio">
+                <video controls autoplay>
+                    <source src="../../../../assets/img/al-aire-libre/al aire libre.mp4" type="video/mp4">
+                </video>
+            </div>
+            <div class="gallery-wrap">
+                <div class="gallery">
+                    <div id="carouselExample" class="carousel slide">
+                        <div class="carousel-inner">
+                            <ng-container *ngFor="let img of entrenamientosJson; let i = index ">
+                                <div class="carousel-item" [class.active]="i===0">
+                                    <img src="{{url}}/mostrar-entrenamiento/{{img.imagen}}" class="d-block w-100"
+                                        alt="'Slide' + (1+1)">
+                                </div>
+                            </ng-container>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample"
+                            data-bs-slide="prev">
+                            <span aria-hidden="true"><i class="fa-solid fa-caret-left"></i></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExample"
+                            data-bs-slide="next">
+                            <span aria-hidden="true"><i class="fa-solid fa-caret-right"></i></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+</div>
+<app-footer></app-footer>

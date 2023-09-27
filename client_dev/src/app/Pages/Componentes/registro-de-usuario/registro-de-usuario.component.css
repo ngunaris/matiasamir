@@ -1,0 +1,56 @@
+.signin {
+
+    display: flex;
+    height: 100vh;
+    background: rgb(49, 49, 49);
+}
+
+.form-signin {
+
+    width: 100%;
+    max-width: 330px;
+    padding: 15px;
+    margin: auto;
+}
+
+.form-signin .form-control {
+
+    position: relative;
+    box-sizing: border-box;
+    height: auto;
+    padding: 10px;
+    font-size: 16px;
+
+}
+
+h3 {
+
+    color: aliceblue;
+}
+
+button {
+    width: 100%;
+}
+
+#regresar {
+
+    background: brown;
+    border: none;
+    font-family: azonix, Helvetica, sans-serif;
+    font-size: 15px;
+    position: absolute;
+    top: 20%;
+    width: auto;
+    right: 2%;
+    height: auto;
+    transition: all 150ms;
+}
+
+#regresar:hover {
+
+    background: rgb(73, 19, 19);
+    color: rgb(168, 168, 168);
+}
+
+
+

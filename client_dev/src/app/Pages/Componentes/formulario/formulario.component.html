@@ -1,0 +1,87 @@
+<div class="showcase">
+    <div class="bio-container">
+        <!--
+        <form class="principal-form was-validate" id="form" (ngSubmit)="guardarFormulario(f)" #f="ngForm" action="/crear-formulario" method="post">
+            <h3>Contacto</h3>
+            <h4>completa el siguiente formulario para obtener más información</h4>
+            <div class="form-group">
+
+                NOMBRE
+                <input type="text" name="nombreForm" class="validar" id="name" [(ngModel)]="listaFormulario.nombre"
+                    #nombreForm="ngModel" placeholder="Introduce tu nombre" pattern="(?=.*[A-Za-z]).{3,10}" required>
+                <div *ngIf="!nombreForm.value && nombreForm.touched" class="invalid-feedback"> Error en el campo de
+                    usuario</div>
+                <div *ngIf="nombreForm.errors?.['required'] && nombreForm.touched" class="invalid-feedback"> Este campo
+                    es obligatorio</div>
+
+            
+
+            EDAD
+            <input type="text" name="edadFormForm" [(ngModel)]="listaFormulario.edad" #edadFormForm="ngModel"
+                class="validar" id="edad" placeholder="Introduce tu edad" required>
+            <div class="invalid-feedback">Este campo es obligatorio</div>
+
+
+            EMAIL
+            <input type="email" name="emailForm" [(ngModel)]="listaFormulario.email" #emailForm="ngModel"
+                class="validar" id="email" placeholder="ejemplo@email.com">
+            <div *ngIf="emailForm.errors?.['required'] && emailForm.touched" class="invalid-feedback"> Este campo es
+                obligatorio</div>
+
+            MENSAJE
+            <textarea id="message" name="mensajeForm" [(ngModel)]="listaFormulario.mensaje" #mensajeForm="ngModel"
+                cols="10" placeholder="Deja tu mensaje"></textarea>
+            <div class="invalid-feedback">Este campo es obligatorio</div>
+
+            CREACION DE ADVERTENCIA
+            <div *ngIf="!validarCreacionFormulario" class="alert alert-danger mt-3 errorCreacionUsuario">
+                {{formularioCreado?.mensaje}}
+            </div>
+            <div *ngIf="formu" class="alert alert-success mt-3 validarCreacionUsuario">
+                {{formularioCreado?.mensaje}}
+            </div>
+            <button type="submit" id="enviar">Enviar</button>
+            <p class="warnings" id="warnings"></p>
+            </div>
+        </form>-->
+        <form class="principal-form was-validate" id="form" [formGroup]="datos" method="post">
+            <h3>Contacto</h3>
+            <h4>completa el siguiente formulario para obtener más información</h4>
+            <div class="form-group">
+
+                <!--NOMBRE-->
+                <input type="text" formControlName="asunto" class="validar" id="name" placeholder="Introduce tu nombre"
+                    pattern="(?=.*[A-Za-z]).{3,10}" required>
+                <div *ngIf="datos.get('asunto').hasError('required') && datos.get('asunto').touched"  class="warnings">Este campo es obligatorio</div>
+                <div *ngIf="datos.get('asunto').hasError('pattern') && datos.get('asunto').touched"   class="warningsDos">Error en el campo de usuario </div>
+                <div *ngIf="datos.get('asunto').hasError('forbiddenWord')" class="warningsDos">El mensaje contiene palabras prohibidas</div>
+
+                <!--EDAD-->
+                <input type="text" formControlName="edad" class="validar" id="edad" placeholder="Introduce tu edad" pattern="^(1[4-9]|[2-7][0-9]|85)$" required>
+                <div *ngIf="datos.get('edad').hasError('required') && datos.get('edad').touched" class="warnings">Este campo es obligatorio</div>
+                <div *ngIf="datos.get('edad').hasError('pattern') && datos.get('edad').touched"   class="warningsDos">Error en el campo de edad </div>
+
+                <!--EMAIL-->
+                <input type="email" formControlName="correo" class="validar" id="email" placeholder="ejemplo@email.com" pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$" required>
+                <div *ngIf="datos.get('correo').hasError('required') && datos.get('correo').touched" class="warnings">Este campo es obligatorio</div>
+                <div *ngIf="datos.get('correo').hasError('pattern') && datos.get('correo').touched"   class="warningsDos">Error en el campo de edad </div>
+
+                <!--MENSAJE-->
+                <textarea id="message" formControlName="mensaje" cols="10" placeholder="Deja tu mensaje" required></textarea>
+                <div *ngIf="datos.get('mensaje').hasError('required') && datos.get('mensaje').touched" class="warnings">Este campo es obligatorio</div>
+                <div *ngIf="datos.get('mensaje').hasError('forbiddenWord')" class="warningsDos">El mensaje contiene palabras prohibidas</div>
+
+                <!--CREACION DE ADVERTENCIA-->
+                <div *ngIf="mostrarError" class="alert alert-danger mt-3 errorCreacionUsuario">
+                    Tienes algun error en el formulario
+                </div>
+                <div *ngIf="mostrarExito" class="alert alert-success mt-3 validarCreacionUsuario">Mensaje enviado con
+                    exito
+
+                </div>
+                <button type="submit" [disabled]="!datos.valid" (click)="envioCorreo()" id="enviar">Enviar</button>
+                <p class="warnings" id="warnings"></p>
+            </div>
+        </form>
+
+    </div>

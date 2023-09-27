@@ -1,0 +1,141 @@
+
+/*SHOWCASE*/
+.showcase{
+    display: flex;
+    justify-content: center;
+    width: 100vw;
+    background: black;
+    z-index: 1;
+    font-family: azonix, Helvetica, sans-serif;
+
+}
+.bio-container{
+    display: flex;
+    justify-content: center;
+    width: 80%;
+    height: 800px;
+    margin: 20px;
+    border-radius: 25px;
+    padding: 20px;
+    border: 2px solid grey;
+    box-shadow: 5px 2px 100px 1px rgba(64,63,65,0.7);
+    transition: all 500ms;
+    
+}
+
+.bio-container:hover{
+
+    box-shadow: 5px 2px 100px 35px rgba(64,63,65,0.7)
+    
+}
+
+
+.bio{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+    border-radius: 25px 0 0 25px;
+    padding: 20px;
+    color: #ffffff;
+    overflow-y: scroll;
+    transition: all 600ms;
+}
+
+.bio p{
+ 
+    line-height: 25px;
+    
+}
+
+.bio::-webkit-scrollbar {
+    display: none;
+}
+
+.bio-img{
+   
+    width: 50%;
+    border-radius: 0 25px 25px 0;
+    text-align: center;
+
+
+}
+
+.bio-img img{
+
+    object-fit: cover ;
+    max-width: 100%;
+    max-height: 100%;
+    border-radius: 20px;
+    border: 2px solid #979494;
+
+}
+
+@media  screen and (max-width: 1470px){
+.bio-container{
+    align-items: center;
+}
+
+}
+
+@media  screen and (max-width: 1000px) {
+    
+
+    .showcase{
+
+        height: auto;
+    }
+    .bio-container{
+
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: auto;
+            flex-wrap: wrap;
+            
+        
+    }
+
+    .bio{
+
+        width: 100%;
+    }
+
+
+    
+    .bio-img{
+padding: 5%;
+    }
+
+
+
+    .bio-img img{
+
+        max-width: 100%;
+        max-height: 100%;
+        margin: 0;
+    }
+}
+
+@media  screen and (max-width: 500px){
+
+
+    .bio-container{
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+    }
+    .bio p {
+    font-size: 10px;
+    text-align: left;
+    }
+
+    
+    .bio-img img{
+
+        max-width: 130%;
+        max-height: 130%;
+        margin: 0;
+    }
+}

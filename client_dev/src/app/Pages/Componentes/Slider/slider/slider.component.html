@@ -1,0 +1,22 @@
+<!--slider-->
+<div  id="slide">
+
+    <ul>
+      <li *ngFor="let slide of slideJson; let ultimoIndice = last" >
+        <div class="textoSlide">
+          <a href="#"><h1>{{slide.titulo}}</h1></a>
+          <h3>{{slide.descripcion}}</h3>
+        </div>
+        <img src="{{url}}/mostrar-img/{{slide.imagen}}" alt="">
+        {{ultimoIndice ? callback() : ""}}
+      </li>
+    </ul>
+    <ol id="paginacion">
+      <li item="1"><span class="fa fa-circle"></span></li>
+      <li item="2"><span class="fa fa-circle"></span></li>
+      <li item="3"><span class="fa fa-circle"></span></li>
+    </ol>
+    <div class="flechas" id="retroceder"><span class="fa fa-chevron-left"></span></div>
+    <div class="flechas" id="avanzar"><span class="fa fa-chevron-right"></span></div>
+  </div>
+

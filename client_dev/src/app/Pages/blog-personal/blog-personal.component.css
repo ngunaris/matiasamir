@@ -1,0 +1,13 @@
+/*----------------------------------------------------------------GENERALES----------------------------------------------------------------------*/
+
+.bodys {
+    font-size: 16;
+    font-family: azonix, Helvetica, sans-serif;
+    background: black;
+    width: 100%;
+    overflow-x: hidden;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+}
+

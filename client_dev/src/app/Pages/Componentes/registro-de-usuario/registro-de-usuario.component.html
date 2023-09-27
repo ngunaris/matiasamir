@@ -1,0 +1,33 @@
+<div class="signin text-center">
+
+    <form class="form-signin was-validated"  (ngSubmit)="guardarUsuario(f)" #f="ngForm" novalidate>
+        <h3 class="mb-3 font-weight-normal">Registro de Usuario</h3>
+        <div class="form-group">
+            <input class="form-control mt-3" type="text" placeholder="Usuario" name="usuarioLogin"
+                [(ngModel)]="listaUsuario.usuario" pattern="(?=.*[A-Za-z]).{2,10}" #usuarioLogin="ngModel" required>
+            <div *ngIf="!usuarioLogin.value && usuarioLogin.touched" class="invalid-feedback"> Error en el campo de
+                usuario</div>
+            <div  *ngIf="usuarioLogin.errors?.['required'] && usuarioLogin.touched" class="invalid-feedback"> Este campo es obligatorio</div>
+
+            <input class="form-control mt-3" type="password" placeholder="Contraseña" name="passwordLogin"
+                [(ngModel)]="listaUsuario.password" #passwordLogin="ngModel" required>
+            <div *ngIf="passwordLogin.errors?.['required'] && passwordLogin.touched" class="invalid-feedback"> Este campo es obligatorio</div>
+            
+            <input class="form-control mt-3" type="email" placeholder="Email" name="emailLogin"
+                [(ngModel)]="listaUsuario.email" #emailLogin="ngModel" required>
+            <div *ngIf="emailLogin.errors?.['required'] && emailLogin.touched" class="invalid-feedback"> Este campo es obligatorio</div>
+        </div>
+        <!--CREACION DE ADVERTENCIA-->
+        <div *ngIf="!validarCreacionUsuario" class="alert alert-danger mt-3 errorCreacionUsuario">
+            {{usuarioCreado?.mensaje}}
+        </div>
+        <div *ngIf="registro" class="alert alert-success mt-3 validarCreacionUsuario">
+            {{usuarioCreado?.mensaje}}
+        </div>
+        <button class="btn btn-lg btn-success btn-block mt-3" type="submit"> Confirmar Registro</button>
+    </form>
+
+
+</div>
+<a routerLink="/user">
+    <button class="btn btn-lg btn-primary btn-block mt-3" id="regresar" type="submit" > Regresar</button></a>

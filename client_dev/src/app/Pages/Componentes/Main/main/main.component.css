@@ -1,0 +1,161 @@
+/*----------------------------------------------------------------MAIN----------------------------------------------------------------------*/
+
+
+
+/*CARDS*/
+
+#segmento {
+
+    width: 100%;
+    height: 800px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.entrenamientos {
+    height: 50px;
+    width: 100%;
+    text-align: center;
+    margin-top: 80px;
+}
+
+.entrenamientos h3 {
+    font-size: 30px;
+    color: #f2f2f2;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    color: #f2f2f2;
+    width: 100%;
+    justify-items: center;
+    margin-top: 50px;
+
+}
+
+.cards>div {
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+
+
+}
+
+.img1 {
+
+    transition: all 300ms;
+    border-radius: 25px;
+    cursor: pointer;
+}
+
+.img1:hover {
+    transform: scale(1.05);
+
+}
+
+.cards h3 {
+    font-size: 18px;
+    margin: 15px 0;
+}
+
+.cards a {
+    padding: 10px 0;
+    color: #f2f2f2;
+    text-transform: uppercase;
+    display: inline-block;
+    font-weight: bold;
+
+}
+
+.cards a:hover {
+    text-decoration: underline;
+    opacity: .5;
+}
+
+
+
+.cards img {
+    min-width: 400px;
+    height: 350px;
+    object-fit: cover;
+}
+
+#article {
+
+    text-align: center;
+}
+
+#article p {
+
+    line-height: 20px;
+}
+
+@media screen and (max-width:1500px) {
+    .entrenamientos h3 {
+        font-size: 25px;
+    }
+    #segmento{
+
+        height: auto;
+    }
+}
+
+@media screen and (max-width:1415px) {
+    .cards {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 25px;
+        text-align: center;
+    }
+
+    .entrenamientos h3 {
+        font-size: 20px;
+    }
+}
+
+@media screen and (max-width: 1076px) {
+
+    .cards {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 25px;
+        text-align: center;
+    }
+
+    .entrenamientos h3 {
+        font-size: 17px;
+    }
+}
+
+@media screen and (max-width: 900px) {
+
+    .cards {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        padding: 70px;
+    }
+
+    .cards img {
+        object-fit: cover;
+        width: 100%;
+        min-width: 300px;
+        padding: 10px;
+    }
+
+    .card-int h3,
+    .card-int p {
+        max-width: 250px;
+    }
+}
+
+@media screen and (max-width: 500px){
+
+ .cards {
+
+    padding: 70px;
+ }
+}

@@ -1,0 +1,445 @@
+/*----------------------------------------------------------------------------MENU OCULTO--------------------------------------------------------------*/
+.menu-btn {
+    display: block;
+    position: absolute;
+    cursor: pointer;
+    color: #f2f2f2;
+    top: 20px;
+    right: 30px;
+    z-index: 2;
+    font-size: 1.2rem;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 300ms ease;
+    
+}
+
+.container-oculto-visto nav ul li a{
+
+    text-decoration: none;
+    font-family: azonix, Helvetica, sans-serif;
+}
+
+.clas {
+    display: none;
+    z-index: 1;
+}
+
+
+
+@media screen and (max-width: 1074px) {
+    .menu-btn {
+        visibility: visible;
+        opacity: 1;
+    }
+
+   .rotate{
+
+        transform: rotate(90deg);
+    }
+
+    .menu-btn i {
+        color: white;
+    }
+
+    .menu-btn i:hover {
+        color: grey;
+    }
+
+
+
+    .barra-menu ul.menu {
+        display: none;
+    }
+    .nombreUsuario{
+        display: none;
+    }
+
+    .nombreUsuarioDos {
+    
+        width: auto;
+        color: rgb(202, 16, 16);
+        font-size: 18px;
+        text-decoration: none;
+        font-family: azonix, Arial, Helvetica, sans-serif;
+        list-style: none;
+    }
+
+    .nombre-usuario{
+        color: #c70e0e;
+    }
+
+    .clas {
+        display: flex;
+        flex-direction: column;
+        width: 320;
+        height: 100%;
+        background: #616161;
+        opacity: 0.95;
+        position: fixed;
+        left: -300px;
+        top: 0;
+        transition: all 300ms;
+    }
+
+    .clas nav {
+        width: 100%;
+        margin: 40px 0 0 0;
+    }
+
+    .clas nav ul li {
+
+        margin: 20px;
+        list-style: none;
+    }
+
+    .clas nav ul li a {
+
+        font-size: 19px;
+        color: #f2f2f2;
+        text-decoration: none;
+        font-family: azonix, Helvetica, sans-serif;
+    }
+
+    .logo {
+        width: 200px;
+        padding: 10px 0 0 20px;
+        margin-left: 35px;
+        transition: all 300ms ease;
+    }
+
+    .usuario:hover{
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100px;
+        height: 30px;
+        border-radius: 15px;
+        background: #2b2a2a;
+        color: #bbbbbb;
+        border: none;
+        font-family: azonix, Helvetica, sans-serif;
+        cursor: pointer;
+    }
+    
+
+
+
+    /*______________________________________________________________________*/
+
+    .container-oculto-visto {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 320px;
+        height: 100%;
+        background: #616161;
+        opacity: .95;
+        position: fixed;
+        left: 0;
+        top: 0;
+    }
+
+    .container-oculto-visto nav {
+        width: 100%;
+        margin: 40px 0 0 0;
+    }
+
+    .container-oculto-visto nav ul li {
+        margin: 20px;
+        list-style: none;
+    }
+
+    .container-oculto-visto nav ul li a {
+        font-size: 19px;
+        color: #f2f2f2;
+        text-decoration: none;
+    }
+
+    .container-oculto-visto nav ul li a:hover {
+
+        font-size: 19px;
+        color: #2f3640;
+    }
+
+
+}
+
+.logo-menu-desplegable {
+    width: 200px;
+    padding: 10px 0 0 10px;
+
+}
+
+.logo-oculto {
+
+    padding: 10px 0 0 20px;
+    margin-left: -500px;
+}
+
+.link-social-oculto {
+    display: flex;
+    height: 100%;
+    margin-top: 25px;
+    justify-content: space-between;
+
+}
+
+.link-social-oculto a {
+    height: 100%;
+}
+
+.link-social-oculto a i {
+    font-size: 2rem;
+    color: white;
+    transition: all 300ms ease;
+    padding: 10px;
+}
+
+.link-social-oculto a i:hover {
+    font-size: 2rem;
+    color: white;
+    opacity: .5;
+}
+
+@media screen and (max-width: 600px) {
+
+
+    .clas {
+
+        min-width: 250px;
+        max-width: 70%;
+    }
+
+    .clas nav ul li a {
+
+        font-size: 12px;
+ 
+    }
+    .container-oculto-visto nav ul li a:hover{
+
+        font-size: 12px;
+    }
+}
+
+
+/*----------------------------------------------------------------HEADER----------------------------------------------------------------------*/
+#header {
+    margin: auto;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 15px;
+    background: black;
+    color: white;
+}
+
+.logo {
+    width: 200px;
+    padding: 10px 0 0 10px;
+
+}
+
+.active-link{
+
+    color:#9c0b0b;
+
+}
+
+
+header nav {
+    height: 100%;
+    margin-top: 25px;
+    transition: margin-left 300ms ease;
+}
+
+
+header nav>ul {
+    display: flex;
+    height: 100%;
+
+}
+
+header nav>ul>li {
+    height: 100%;
+    position: relative;
+
+}
+
+header nav>ul>li>a {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    color: white;
+    align-items: center;
+    padding: 25px;
+    font-size: 20px;
+    transition: all 300ms ease;
+    text-decoration: none;
+    font-family: azonix, Helvetica, sans-serif;
+
+}
+
+header nav>ul>li>a:hover {
+    opacity: .5;
+}
+
+.nombreUsuario h4{
+    color: white;
+    font-size: 18px;
+}
+.nombreUsuario {
+
+    width: auto;
+    text-align: center;
+    padding: 10px;
+    height: auto;
+    background: #4a4a4b83;
+    border-radius: 15px;
+    border: none;
+    color: rgb(202, 16, 16);
+    font-size: 18px;
+    text-decoration: none;
+    font-family: azonix, Arial, Helvetica, sans-serif;
+    list-style: none;
+}
+
+/*sub-menu entrenamientos*/
+
+nav ul li ul {
+    width: 220px;
+    height: 130px;
+    display: flex;
+    flex-direction: column;
+    background: rgba(174, 175, 175, 0.171);
+    box-shadow: 0 0 10px 0 rgb(0, 0, 0, 0, 5);
+    border-radius: 7px;
+    border: 1px solid white;
+    position: absolute;
+    text-align: center;
+    left: 20px;
+    justify-content: center;
+    align-items: center;
+    visibility: hidden;
+    opacity: 0;
+    z-index: 10;
+    transition: all 300ms ease;
+    padding: 0;
+}
+
+nav ul li:hover ul {
+    visibility: visible;
+    opacity: 1;
+}
+
+nav ul li ul li {
+   position: relative;
+    width: 100%;
+    height: auto;
+    margin: 0;
+
+}
+
+nav ul li ul li a {
+    color: white;
+    display: block;
+    padding: 6px;
+    font-size: 16px;
+    transition: all 300ms ease;
+    border-radius: 5px;
+    text-decoration: none;
+    font-family: azonix, Helvetica, sans-serif;
+
+
+}
+
+nav ul li ul li a:hover {
+    color: black;
+    background: rgba(216, 216, 216, 0.9);
+
+}
+
+.usuario{
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    height: 30px;
+    border-radius: 15px;
+    background: #3d3d3d;
+    color: #ffffff;
+    border: none;
+    font-size: 15px;
+    font-family: azonix, Helvetica, sans-serif;
+    cursor: pointer;
+    padding: 14px;
+}
+
+/*SOCIAL*/
+
+.link-social {
+    height: 100%;
+}
+
+.link-social a {
+    height: 100%;
+}
+
+.link-social a i {
+    font-size: 2rem;
+    color: white;
+    transition: all 300ms ease;
+    padding: 10px;
+}
+
+.link-social a i:hover {
+    font-size: 2rem;
+    color: white;
+    opacity: .5;
+}
+
+
+
+
+@media screen and (max-width:1500px) {
+
+    header nav {
+        margin-left: 100px;
+    }
+
+    .link-social {
+        display: none;
+    }
+
+}
+
+@media screen and (max-width:1415px) {
+    header nav {
+        margin-left: 100px;
+    }
+
+    header nav>ul>li>a {
+        padding: 15px;
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-width: 1076px) {
+
+    #header {
+        display: flex;
+        justify-content: flex-start;
+    }
+
+    #logo{
+
+        width: 150px;
+    }
+
+
+
+}

@@ -1,0 +1,63 @@
+ 
+#content{
+
+    margin: 20px auto;
+}
+
+#content h1{
+
+    margin: 50px;
+}
+
+
+.form-group{
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    font-family: azonix, Helvetica, sans-serif;
+    background: black;
+    padding: 10px;
+    color: white;
+}
+
+.form-group h2{
+
+    font-family: azonix, Helvetica, sans-serif;
+}
+
+.form-group label, .form-group input{
+
+  margin: 5px;
+
+}
+
+.form-group input{
+    margin: 10px;
+    width: 500px;
+    border-radius: 15px;
+    border: none;
+    transition: all 250ms;
+    background: rgb(175, 29, 29);
+    color: white;
+
+}
+
+.form-group button {
+    margin: 10px;
+    width: 200px;
+    border-radius: 15px;
+    border: none;
+    transition: all 250ms;
+    background: rgb(102, 0, 0);
+    color: white;
+}
+
+.form-group button:hover{
+
+    background: rgb(155, 86, 86);
+    color: white;
+    
+}

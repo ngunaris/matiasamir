@@ -1,0 +1,14 @@
+<!--Cards-->
+<div id="segmento">
+  <div class="entrenamientos" id="entrenamiento">
+    <h3>Entrenamientos Personalizados</h3>
+  </div>
+  <div class="cards">
+    <div id="article" *ngFor="let foto of mainJson">
+      <img class="img1" src="{{foto.foto}}" alt="Foto1" [routerLink]="[foto.link]">
+      <h3>{{foto.titulo}}</h3>
+      <p>{{foto.descripcion}}</p>
+      <a [routerLink]="[foto.link]"> Leer mas <i class="fas fa-angle-double-right"></i></a>
+    </div>
+  </div>
+</div>

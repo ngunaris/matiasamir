@@ -1,0 +1,144 @@
+.box {
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 750px;
+    background: white;
+    width: 100%;
+    padding: 0 20%;
+
+}
+
+
+#izq {
+
+    height: 100%;
+    width: 100%;
+    padding: 25px;
+    display: flex;
+    align-items: center;
+
+}
+
+#izq div {
+
+    display: flex;
+    flex-direction: column;
+    padding: 50px 0;
+    height: 80%;
+    justify-content: center;
+
+}
+
+#izq div p {
+
+    text-align: left;
+    font-size: 18px;
+    line-height: 2rem;
+    font-weight: lighter;
+
+}
+
+#izq h3 {
+    text-align: left;
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+}
+
+
+
+#der {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#der div {
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    height: 80%;
+    margin: 10px;
+    cursor: pointer;
+    transition: all 250ms;
+    min-width: 200px;
+
+
+}
+
+hr{
+    color: rgb(150, 7, 7);
+    height: 1px;
+}
+
+#der div:hover {
+
+    transform: translateY(-10px)
+}
+
+#der div img {
+
+    width: 350px;
+    height: 350px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid rgb(22, 22, 22);
+    background: black;
+
+
+}
+
+@media screen and (max-width: 1600px) {
+
+ .box{
+
+    flex-direction: column;
+    padding: 20px;
+    height: auto;
+ }
+
+ #izq, #der{
+
+    width: 80%;
+ }
+
+ #izq div p {
+
+    text-align: center;
+    font-size: 14px;
+    line-height: 2rem;
+    font-weight: lighter;
+    overflow-wrap: initial;
+}
+
+#izq h3 {
+    text-align: center;
+
+}
+
+#der div img {
+
+    width: 250px;
+    height: 250px;
+
+}
+
+    
+}
+
+@media screen and(max-width:930px){
+
+    #der div img {
+
+        width: 150px;
+        height: 150px;
+    
+    }
+
+
+}

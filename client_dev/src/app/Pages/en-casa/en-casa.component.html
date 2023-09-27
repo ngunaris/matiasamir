@@ -1,0 +1,53 @@
+<div class="showcase">
+    <div class="contenedor">
+        <div class="btns">
+            <a routerLink="/entrenamientos" class="btn btn-primary" >Al aire Libre</a>
+            <a routerLink="/alto-rendimiento" class="btn btn-primary">Alto Rendimiento</a>
+        </div>
+        <div class="bio-container">
+            <div class="bio">
+                <h3 id="titulo">En Sala</h3>
+                <br><br>
+                <p>A lo largo de nuestra vida nos vamos marcando determinados objetivos de
+                    cualquier índole...lo que nos vamos olvidando es que para poder cumplir con ellos
+                    es que necesitamos ser funcionales, tanto física como mentalmente.
+                    Por lo tanto, una de las mejores opciones es trabajar en conjunto con un
+                    profesional en la materia. Ésto nos dará la tranquilidad de que nuestros gustos,
+                    profesión, actividades diarias, lesiones, patologías, etc, estarán contempladas en
+                    una planificación acorde a nuestras necesidades.
+                </p>
+            </div>
+            <div class="bio-img" id="pic-bio">
+                <video controls autoplay>
+                    <source src="../../../assets/img/en-sala/en-sala.mp4" type="video/mp4">
+                </video>
+            </div>
+            <div class="gallery-wrap">
+                <div class="gallery">
+                    <div id="carouselExample" class="carousel slide">
+                        <div class="carousel-inner">
+                            <ng-container *ngFor="let img of enSalaJson; let i = index ">
+                                <div class="carousel-item" [class.active]="i===0">
+                                    <img src="#" class="d-block w-100" alt="'Slide' + (1+1)">
+                                </div>
+                            </ng-container>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample"
+                            data-bs-slide="prev">
+                            <span aria-hidden="true"><i class="fa-solid fa-caret-left"></i></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExample"
+                            data-bs-slide="next">
+                            <span aria-hidden="true"><i class="fa-solid fa-caret-right"></i></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+</div>

@@ -1,0 +1,19 @@
+[
+    {
+        "imagen": "assets/img/slide01.jpg",
+        "titulo": "< Conoce mas >",
+        "descripcion": "Saca lo mejor de ti"
+    },
+    {
+        "imagen": "assets/img/slide02.jpg",
+        "titulo": "lorem",
+        "descripcion": "lorem lorem lorem"
+    },
+    {
+        "imagen": "assets/img/slide03.jpg",
+        "titulo": "lorem",
+        "descripcion": "lorem lorem lorem"
+    }
+
+
+]

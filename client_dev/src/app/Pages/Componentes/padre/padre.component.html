@@ -1,0 +1,17 @@
+<h1> Photo Gallery</h1>
+
+<div class="photos">
+  <div *ngFor="let photo of photos">
+    <img [src]="photo.imagen" alt="#">
+    <p>{{photo.name}}</p>
+    <button (click)="editPhoto(photo)">Edit</button>
+    <button (click)="deletePhoto(photo)">Delete</button>
+
+  </div>
+</div>
+
+<form (submit)="createPhoto()">
+  <input type="text" [(ngModel)]="photoName" placeholder="Photo name">
+  <input type="file" (change)="onFileChange($event)" title="#">
+  <button type="submit">Create</button>
+</form>

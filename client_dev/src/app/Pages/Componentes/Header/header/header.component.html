@@ -1,0 +1,103 @@
+
+<!--MENU OCULTO------------------------------------------------------------------------------------------------------------------>
+<div class="menu-btn">
+    <i id="btn__open" class="fas fa-bars fa-2x"></i>
+  </div>
+  <div id="container-oculto" class="clas">
+    <img src="assets/img/cacho blanco.png" id="logo-oculto" alt="Matias Amir Icono" class="logo-menu-desplegable">
+    <nav>
+      <ul id="menu-ul">
+        <li>
+          <a class="clear"  id="sub-menu-home" routerLink="home">Home</a>
+        </li>
+        <li>
+          <a class="clear" href="#segmento">Entrenamientos</a>
+        </li>
+        <li>
+          <a class="clear"  routerLink="quien-soy">Sobre mi</a>
+        </li>
+        <li>
+          <a class="clear"  routerLink="blog">Mi Blog</a>
+        </li>
+        <li>
+          <a  class="clear" *ngIf="nombreUsuario" routerLink="contacto">Contacto</a>
+          <a  class="clear" *ngIf="!nombreUsuario" routerLink="user" style="color: grey;">Contacto</a>
+        </li>
+      
+        <li>
+          <a routerLink="user" title="login" *ngIf="!nombreUsuario">
+              <button class="usuario">LOGIN</button>
+          </a>
+          <a routerLink="" title="logout" *ngIf="nombreUsuario">
+            <button class="usuario" (click)="doLogout()">LOGOUT</button>
+        </a>
+      </li>
+      <li *ngIf="nombreUsuario" class="nombreUsuarioDos">
+      <a>Hola <span class="nombre-usuario">{{ nombreUsuario }}</span></a></li>
+      <li class="nombreUsuarioDos"><div *ngIf="tiempoRestante !== null && tiempoRestante > 0">
+        Tiempo restante de sesión: {{ tiempoRestante }} segundos
+      </div>
+      <div *ngIf="tiempoRestante !== null && tiempoRestante <= 0">
+        La sesión ha expirado.
+      </div></li>
+        <li>
+          <div class="link-social-oculto">
+            <a href="#" title="por ahora nose">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="https://instagram.com/matiasamir_entrenador" rel="noopener" title="instagram-cacho">
+              <i class="fab fa-instagram"></i>
+            </a>
+          </div>
+        </li>
+      </ul>
+    </nav>
+  </div>
+
+<!--HEADER---------------------------------------------------------------------------------------------------------------------->
+
+<header id="header">
+    <img src="assets/img/cacho blanco.png" id="logo" alt="Matias Amir Icono" class="logo">
+    <nav id="nav" class="barra-menu">
+        <ul class="menu show" id="navbar">
+            <li>
+                <a id="sub-home" routerLink="home">Home</a>
+            </li>
+            <li>
+                <a href="#segmento">Entrenamientos</a>
+      
+            </li>
+            <li>
+                <a routerLink="quien-soy">Sobre mi</a>
+            </li>
+            <li>
+              <a routerLink="blog">Mi Blog</a>
+            </li>
+            <li>
+                <a *ngIf="nombreUsuario" routerLink="contacto">Contacto</a>
+                <a *ngIf="!nombreUsuario" routerLink="user" style="color: white; opacity: 0.3;">Contacto</a>
+            </li>
+            <li>
+                <a routerLink="user" title="login" *ngIf="!nombreUsuario">
+                    <button class="usuario">LOGIN</button>
+                </a>
+                <a routerLink="" title="logout" *ngIf="nombreUsuario">
+                  <button class="usuario" (click)="doLogout()">LOGOUT</button>
+              </a>
+            </li>
+        </ul>
+    </nav>
+    
+      <a *ngIf="nombreUsuario" class="nombreUsuario"><h4>Hola </h4>{{ nombreUsuario }}</a>
+
+    <!--SOCIAL-->
+    <div class="link-social">
+        <a href="#" title="facebook">
+            <i class="fab fa-facebook-f"></i>
+        </a>
+        <a href="https://instagram.com/matiasamir_entrenador" rel="noopener" title="instagram-cacho">
+            <i class="fab fa-instagram"></i>
+        </a>
+    </div>
+
+</header>

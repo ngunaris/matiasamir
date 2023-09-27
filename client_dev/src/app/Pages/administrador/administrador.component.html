@@ -1,0 +1,34 @@
+<div class="container text-center" id="content">
+  <h1>Administrador Editor</h1>
+  <div class="d-grid gap-2">
+    <a routerLink="/create" class="btn btn-success" type="button">SLIDER <fa-icon [icon]="faCirclePlus" [size]="'2x'"></fa-icon></a>
+  </div>
+  <div class="table-responsive">
+    <table class="table table-hover">
+      <thead>
+               <tr class="table-info">
+                <th>Id</th>
+                <th>Imagen</th>
+                <th>Acciones</th>
+               </tr>
+      </thead>
+      <tbody>
+          <tr *ngFor="let product of products; let i = index">
+            <td>{{product._id}}</td>
+            <td>{{product.imagen}}</td>
+            <td>
+              <div class="btn-group">
+                <a routerLink="/update/{{product._id}}" class="btn btn-primary"><fa-icon [icon]="faPen" [size]="'1x'"></fa-icon></a>
+                <button (click)="delete(product._id, i)" class="btn btn-danger" title="#"><fa-icon [icon]="faTrash" [size]="'1x'"></fa-icon></button>
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+
+
+
+

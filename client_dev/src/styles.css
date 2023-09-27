@@ -1,0 +1,28 @@
+/* You can add global styles to this file, and also import other style files */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+    font-size: 16;
+    font-family: azonix, Helvetica, sans-serif;
+    background: black;
+    width: 100%;
+
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+}

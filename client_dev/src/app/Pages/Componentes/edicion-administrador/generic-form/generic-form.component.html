@@ -1,0 +1,21 @@
+<form [formGroup]="formProduct" (ngSubmit)="onSubmit()" class="mt-5">
+    <div class="row mb-3">
+        <label class="col-sm-2 col-form-label">Descripcion</label>
+        <input formControlName="descripcion" type="text" class="form-control" title="#">
+    </div>
+    <div class="row mb-3">
+        <label class="col-sm-2 col-form-label">Imagen</label>
+        <input formControlName="imagen" type="file" class="form-control" (change)="capturarFile($event)" title="#" accept="image/*">
+    </div>
+    <div>
+        <img [src]="previsulizacion" alt="">
+    </div>
+    <div class="row mb-3">
+        <label class="col-sm-2 col-form-label">texto</label>
+        <input formControlName="texto" type="text" class="form-control" title="#">
+    </div>
+    <div class="btn-group float-end" role="group">
+        <button [disabled]="!formProduct.valid" type="submit" class="btn btn-primary">Submit</button>
+        <a routerLink="/" class="btn btn-outline-secondary">Cancel</a>
+    </div>
+</form>

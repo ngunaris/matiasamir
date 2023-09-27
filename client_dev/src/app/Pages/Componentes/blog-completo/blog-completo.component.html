@@ -1,0 +1,16 @@
+<div class="container">
+    <h2>MI BLOG PERSONAL</h2>
+
+
+<div class="box">
+    <div class="card" *ngFor="let myBlog of blogJson">
+        <img src="{{url}}/mostrar-blog/{{myBlog.imagen}}" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">{{myBlog.titulo}}</h5>
+          <p class="card-text">{{myBlog.descripcion}}</p>
+          <a href="#" class="btn btn-primary">Ir</a>
+        </div>
+      </div>
+</div>
+
+</div>

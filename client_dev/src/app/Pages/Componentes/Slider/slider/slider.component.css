@@ -1,0 +1,170 @@
+/*SLIDER*/
+
+
+#slide {
+    position: relative;
+    width: 100%;
+    margin: auto;
+    overflow: hidden;
+    height: auto;
+
+}
+
+#slide ul {
+    position: relative;
+    display: table;
+    width: 300%;
+    height: auto;
+    margin: auto;
+    padding: 0;
+
+}
+
+#slide ul li {
+    position: relative;
+    width: 33.33%;
+    float: left;
+}
+
+#slide ul li img {
+
+    width: 100%;
+    object-fit: cover;
+}
+#slide #paginacion {
+    position: absolute;
+    width: 100%;
+    margin: auto;
+    bottom: 10px;
+    z-index: 1;
+    left: 0;
+    text-align: center;
+
+}
+
+#slide #paginacion li {
+
+    display: inline-block;
+    color: white;
+    text-shadow: 0px 0px 5px rgb(224, 221, 221);
+    text-align: center;
+    margin: 0 5px;
+    cursor: pointer;
+    opacity: .5;
+}
+
+#slide #paginacion li:first-child {
+    opacity: 1;
+}
+
+.textoSlide {
+    position: absolute;
+    width: 100%;
+    margin: auto;
+    color: white;
+    text-align: center;
+    left: 0;
+    top: 75%;
+    opacity: .7;
+
+}
+
+.textoSlide a{
+
+    text-decoration: none;
+    color: white;
+
+}
+
+.textoSlide h1 {
+
+    font-size: 24px;
+    transition: all 300ms ease;
+}
+
+.textoSlide h3 {
+    opacity: .6;
+    margin-top: 10px;
+    font-size: 18px;
+    transition: all 300ms ease;
+}
+
+.flechas {
+
+    color: rgba(255, 255, 255, 0.459);
+    font-size: 50px;
+    position: absolute;
+    top: 40%;
+    margin: auto;
+
+}
+
+#avanzar {
+
+    right: 10px;
+
+}
+
+#avanzar:hover,
+#retroceder:hover {
+
+    color: white;
+    transition: color .5s;
+
+}
+
+#retroceder {
+
+    left: 10px;
+}
+
+@media screen and (max-width:1500px) {
+    .flechas {
+        top: 40%;
+    }
+
+}
+
+@media screen and (max-width:1415px) {
+    .flechas {
+        top: 40%;
+    }
+}
+
+@media screen and (max-width: 1076px) {
+
+    .textoSlide h1 {
+        font-size: 18px;
+    }
+
+    .textoSlide h3 {
+        font-size: 14px;
+    }
+
+    #slide #paginacion {
+        display: none;
+    }
+
+    .textoSlide {
+        font-size: 10px;
+    }
+}
+
+@media screen and (max-width: 900px){
+
+    .flechas{
+
+        font-size: 20px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+
+    .textoSlide h1 {
+        font-size: 10px;
+    }
+
+    .textoSlide h3 {
+        font-size: 8px;
+    }
+}

@@ -1,0 +1,20 @@
+[
+    {
+        "foto": "assets/img/cantero.jpg",
+        "titulo": "Grupal al aire libre.",
+        "descripcion": "Disfrutar del aire para mejorar nuestra salud física",
+        "link": "entrenamientos"
+    },
+    {
+        "foto": "assets/img/sala-fitness.jpg",
+        "titulo": "En Sala",
+        "descripcion": "Acompañamiento en sala para trabajos especificos",
+        "link": "en-casa"
+    },
+    {
+        "foto": "assets/img/altoREndimiento.jpg",
+        "titulo": "Alto Rendimiento",
+        "descripcion": "Alto rendimiento implica la capacidad de lograr resultados superiores",
+        "link": "alto-rendimiento"
+    }
+]
